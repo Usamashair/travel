@@ -1,0 +1,881 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://travel.org#"
+     xml:base="http://travel.org"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:base="http://www.semanticweb.org/ontologies/travel#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:travel1="http://travel.org#">
+    <owl:Ontology rdf:about="http://travel.org"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#hasLocation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ontologies/travel#hasLocation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#hasName -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ontologies/travel#hasName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#hasTravelType -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ontologies/travel#hasTravelType"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://travel.org#availableAt -->
+
+    <owl:ObjectProperty rdf:about="http://travel.org#availableAt">
+        <rdfs:domain rdf:resource="http://travel.org#Accommodation"/>
+        <rdfs:range rdf:resource="http://travel.org#Destination"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://travel.org#bookedBy -->
+
+    <owl:ObjectProperty rdf:about="http://travel.org#bookedBy"/>
+    
+
+
+    <!-- http://travel.org#bookedFor -->
+
+    <owl:ObjectProperty rdf:about="http://travel.org#bookedFor"/>
+    
+
+
+    <!-- http://travel.org#booksAccommodation -->
+
+    <owl:ObjectProperty rdf:about="http://travel.org#booksAccommodation">
+        <rdfs:domain rdf:resource="http://travel.org#Person"/>
+        <rdfs:range rdf:resource="http://travel.org#Accommodation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://travel.org#hasHealthRequirement -->
+
+    <owl:ObjectProperty rdf:about="http://travel.org#hasHealthRequirement">
+        <rdfs:domain rdf:resource="http://travel.org#Destination"/>
+        <rdfs:range rdf:resource="http://travel.org#HealthAndSafety"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://travel.org#hasPricing -->
+
+    <owl:ObjectProperty rdf:about="http://travel.org#hasPricing">
+        <rdfs:domain rdf:resource="http://travel.org#TourismServices"/>
+        <rdfs:range rdf:resource="http://travel.org#Pricing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://travel.org#hasTravelDocument -->
+
+    <owl:ObjectProperty rdf:about="http://travel.org#hasTravelDocument">
+        <rdfs:domain rdf:resource="http://travel.org#Person"/>
+        <rdfs:range rdf:resource="http://travel.org#TravelDocuments"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://travel.org#providesService -->
+
+    <owl:ObjectProperty rdf:about="http://travel.org#providesService">
+        <rdfs:domain rdf:resource="http://travel.org#Destination"/>
+        <rdfs:range rdf:resource="http://travel.org#TourismServices"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://travel.org#suitableFor -->
+
+    <owl:ObjectProperty rdf:about="http://travel.org#suitableFor">
+        <rdfs:domain rdf:resource="http://travel.org#TourismServices"/>
+        <rdfs:range rdf:resource="http://travel.org#TypesOfTravel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://travel.org#travelsTo -->
+
+    <owl:ObjectProperty rdf:about="http://travel.org#travelsTo">
+        <rdfs:domain rdf:resource="http://travel.org#Person"/>
+        <rdfs:range rdf:resource="http://travel.org#Destination"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://travel.org#usesTransport -->
+
+    <owl:ObjectProperty rdf:about="http://travel.org#usesTransport">
+        <rdfs:domain rdf:resource="http://travel.org#Person"/>
+        <rdfs:range rdf:resource="http://travel.org#Transportation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#hasDocument -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/travel#hasDocument"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#hasTrip -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/travel#hasTrip"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#organizes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/travel#organizes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#travelsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/travel#travelsTo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://travel.org#bookingDate -->
+
+    <owl:DatatypeProperty rdf:about="http://travel.org#bookingDate">
+        <rdfs:domain rdf:resource="http://travel.org#Booking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://travel.org#bookingId -->
+
+    <owl:DatatypeProperty rdf:about="http://travel.org#bookingId">
+        <rdfs:domain rdf:resource="http://travel.org#Booking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://travel.org#hasCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://travel.org#hasCapacity">
+        <rdfs:domain rdf:resource="http://travel.org#Accommodation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://travel.org#hasContact -->
+
+    <owl:DatatypeProperty rdf:about="http://travel.org#hasContact">
+        <rdfs:domain rdf:resource="http://travel.org#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://travel.org#hasDocNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://travel.org#hasDocNumber">
+        <rdfs:domain rdf:resource="http://travel.org#TravelDocuments"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://travel.org#hasEndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://travel.org#hasEndDate">
+        <rdfs:domain rdf:resource="http://travel.org#TourismServices"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://travel.org#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://travel.org#hasName">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://travel.org#hasPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://travel.org#hasPrice">
+        <rdfs:domain rdf:resource="http://travel.org#Pricing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://travel.org#hasRating -->
+
+    <owl:DatatypeProperty rdf:about="http://travel.org#hasRating">
+        <rdfs:domain rdf:resource="http://travel.org#Accommodation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://travel.org#hasRequirementLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://travel.org#hasRequirementLevel">
+        <rdfs:domain rdf:resource="http://travel.org#HealthAndSafety"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://travel.org#hasStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://travel.org#hasStartDate">
+        <rdfs:domain rdf:resource="http://travel.org#TourismServices"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://travel.org#totalCost -->
+
+    <owl:DatatypeProperty rdf:about="http://travel.org#totalCost">
+        <rdfs:domain rdf:resource="http://travel.org#Booking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://travel.org#Accommodation -->
+
+    <owl:Class rdf:about="http://travel.org#Accommodation"/>
+    
+
+
+    <!-- http://travel.org#Booking -->
+
+    <owl:Class rdf:about="http://travel.org#Booking"/>
+    
+
+
+    <!-- http://travel.org#Destination -->
+
+    <owl:Class rdf:about="http://travel.org#Destination"/>
+    
+
+
+    <!-- http://travel.org#HealthAndSafety -->
+
+    <owl:Class rdf:about="http://travel.org#HealthAndSafety"/>
+    
+
+
+    <!-- http://travel.org#Person -->
+
+    <owl:Class rdf:about="http://travel.org#Person"/>
+    
+
+
+    <!-- http://travel.org#Pricing -->
+
+    <owl:Class rdf:about="http://travel.org#Pricing"/>
+    
+
+
+    <!-- http://travel.org#TourismServices -->
+
+    <owl:Class rdf:about="http://travel.org#TourismServices"/>
+    
+
+
+    <!-- http://travel.org#Transportation -->
+
+    <owl:Class rdf:about="http://travel.org#Transportation"/>
+    
+
+
+    <!-- http://travel.org#TravelDocuments -->
+
+    <owl:Class rdf:about="http://travel.org#TravelDocuments"/>
+    
+
+
+    <!-- http://travel.org#TypesOfTravel -->
+
+    <owl:Class rdf:about="http://travel.org#TypesOfTravel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#Destination -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/travel#Destination"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#Document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/travel#Document"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/travel#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#TravelAgency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/travel#TravelAgency"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#Trip -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/travel#Trip"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://travel.org#AdventureTravel -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#AdventureTravel">
+        <rdf:type rdf:resource="http://travel.org#TypesOfTravel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#AirAsiaFlight102 -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#AirAsiaFlight102">
+        <rdf:type rdf:resource="http://travel.org#Transportation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#AliKhan -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#AliKhan">
+        <rdf:type rdf:resource="http://travel.org#Person"/>
+        <booksAccommodation rdf:resource="http://travel.org#MountainCabinColorado"/>
+        <hasTravelDocument rdf:resource="http://travel.org#TravelItinerary"/>
+        <travelsTo rdf:resource="http://travel.org#Colorado"/>
+        <usesTransport rdf:resource="http://travel.org#ColoradoBusService"/>
+        <hasContact>ali@gmail.com</hasContact>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#Bali -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#Bali">
+        <rdf:type rdf:resource="http://travel.org#Destination"/>
+        <hasHealthRequirement rdf:resource="http://travel.org#VaccinationRequirements"/>
+        <providesService rdf:resource="http://travel.org#ScubaDivingPackage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#BaliScooterRental -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#BaliScooterRental">
+        <rdf:type rdf:resource="http://travel.org#Transportation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#Booking001 -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#Booking001">
+        <rdf:type rdf:resource="http://travel.org#Booking"/>
+        <bookedBy rdf:resource="http://travel.org#JohnDoe"/>
+        <bookedFor rdf:resource="http://travel.org#CityTour"/>
+        <bookingDate>2025-06-10</bookingDate>
+        <bookingId>BKG1234</bookingId>
+        <totalCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</totalCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#Booking002 -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#Booking002">
+        <rdf:type rdf:resource="http://travel.org#Booking"/>
+        <bookedBy rdf:resource="http://travel.org#MariaGomez"/>
+        <bookedFor rdf:resource="http://travel.org#MuseumPass"/>
+        <bookingDate>2025-07-01</bookingDate>
+        <bookingId>BKG5678</bookingId>
+        <totalCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</totalCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#Booking003 -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#Booking003">
+        <rdf:type rdf:resource="http://travel.org#Booking"/>
+        <bookedBy rdf:resource="http://travel.org#AliKhan"/>
+        <bookedFor rdf:resource="http://travel.org#SafariTrip"/>
+        <bookingDate>2025-08-05</bookingDate>
+        <bookingId>BKG9101</bookingId>
+        <totalCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</totalCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#Booking004 -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#Booking004">
+        <rdf:type rdf:resource="http://travel.org#Booking"/>
+        <bookedBy rdf:resource="http://travel.org#SarahSmith"/>
+        <bookedFor rdf:resource="http://travel.org#ScubaDivingPackage"/>
+        <bookingDate>2025-06-18</bookingDate>
+        <bookingId>BKG1213</bookingId>
+        <totalCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</totalCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#BudgetHostelLondon -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#BudgetHostelLondon">
+        <rdf:type rdf:resource="http://travel.org#Accommodation"/>
+        <availableAt rdf:resource="http://travel.org#London"/>
+        <hasCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</hasCapacity>
+        <hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.8</hasRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#BudgetPricing -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#BudgetPricing">
+        <rdf:type rdf:resource="http://travel.org#Pricing"/>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#BusinessTravel -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#BusinessTravel">
+        <rdf:type rdf:resource="http://travel.org#TypesOfTravel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#CityTour -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#CityTour">
+        <rdf:type rdf:resource="http://travel.org#TourismServices"/>
+        <hasPricing rdf:resource="http://travel.org#StandardPricing"/>
+        <suitableFor rdf:resource="http://travel.org#LeisureTravel"/>
+        <hasEndDate>2025-08-01</hasEndDate>
+        <hasStartDate>2025-08-01</hasStartDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#Colorado -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#Colorado">
+        <rdf:type rdf:resource="http://travel.org#Destination"/>
+        <hasHealthRequirement rdf:resource="http://travel.org#TravelInsurance"/>
+        <providesService rdf:resource="http://travel.org#SafariTrip"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#ColoradoBusService -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#ColoradoBusService">
+        <rdf:type rdf:resource="http://travel.org#Transportation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#CovidGuidelines -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#CovidGuidelines">
+        <rdf:type rdf:resource="http://travel.org#HealthAndSafety"/>
+        <hasRequirementLevel>High</hasRequirementLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#CulturalTravel -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#CulturalTravel">
+        <rdf:type rdf:resource="http://travel.org#TypesOfTravel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#EmergencyNumbers -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#EmergencyNumbers">
+        <rdf:type rdf:resource="http://travel.org#HealthAndSafety"/>
+        <hasRequirementLevel>Basic</hasRequirementLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#HotelMarinaBay -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#HotelMarinaBay">
+        <rdf:type rdf:resource="http://travel.org#Accommodation"/>
+        <availableAt rdf:resource="http://travel.org#Singapore"/>
+        <hasCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</hasCapacity>
+        <hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.9</hasRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#JohnDoe -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#JohnDoe">
+        <rdf:type rdf:resource="http://travel.org#Person"/>
+        <booksAccommodation rdf:resource="http://travel.org#LuxuryResortBali"/>
+        <hasTravelDocument rdf:resource="http://travel.org#Passport"/>
+        <travelsTo rdf:resource="http://travel.org#Bali"/>
+        <usesTransport rdf:resource="http://travel.org#AirAsiaFlight102"/>
+        <hasContact>john@gmail.com</hasContact>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#LeisureTravel -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#LeisureTravel">
+        <rdf:type rdf:resource="http://travel.org#TypesOfTravel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#London -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#London">
+        <rdf:type rdf:resource="http://travel.org#Destination"/>
+        <hasHealthRequirement rdf:resource="http://travel.org#EmergencyNumbers"/>
+        <providesService rdf:resource="http://travel.org#MuseumPass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#LondonMetro -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#LondonMetro">
+        <rdf:type rdf:resource="http://travel.org#Transportation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#LuxuryPricing -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#LuxuryPricing">
+        <rdf:type rdf:resource="http://travel.org#Pricing"/>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2500</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#LuxuryResortBali -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#LuxuryResortBali">
+        <rdf:type rdf:resource="http://travel.org#Accommodation"/>
+        <availableAt rdf:resource="http://travel.org#Bali"/>
+        <hasCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</hasCapacity>
+        <hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.7</hasRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#MariaGomez -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#MariaGomez">
+        <rdf:type rdf:resource="http://travel.org#Person"/>
+        <booksAccommodation rdf:resource="http://travel.org#HotelMarinaBay"/>
+        <hasTravelDocument rdf:resource="http://travel.org#VaccinationCard"/>
+        <travelsTo rdf:resource="http://travel.org#Singapore"/>
+        <usesTransport rdf:resource="http://travel.org#BaliScooterRental"/>
+        <hasContact>maria@gmail.com</hasContact>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#MountainCabinColorado -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#MountainCabinColorado">
+        <rdf:type rdf:resource="http://travel.org#Accommodation"/>
+        <availableAt rdf:resource="http://travel.org#Colorado"/>
+        <hasCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</hasCapacity>
+        <hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</hasRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#MuseumPass -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#MuseumPass">
+        <rdf:type rdf:resource="http://travel.org#TourismServices"/>
+        <hasPricing rdf:resource="http://travel.org#BudgetPricing"/>
+        <suitableFor rdf:resource="http://travel.org#CulturalTravel"/>
+        <hasEndDate>2025-06-20</hasEndDate>
+        <hasStartDate>2025-06-15</hasStartDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#Passport -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#Passport">
+        <rdf:type rdf:resource="http://travel.org#TravelDocuments"/>
+        <hasDocNumber>P123456789</hasDocNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#PremiumPricing -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#PremiumPricing">
+        <rdf:type rdf:resource="http://travel.org#Pricing"/>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#SafariTrip -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#SafariTrip">
+        <rdf:type rdf:resource="http://travel.org#TourismServices"/>
+        <hasPricing rdf:resource="http://travel.org#PremiumPricing"/>
+        <suitableFor rdf:resource="http://travel.org#AdventureTravel"/>
+        <hasEndDate>2025-07-07</hasEndDate>
+        <hasStartDate>2025-07-01</hasStartDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#SarahSmith -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#SarahSmith">
+        <rdf:type rdf:resource="http://travel.org#Person"/>
+        <booksAccommodation rdf:resource="http://travel.org#BudgetHostelLondon"/>
+        <hasTravelDocument rdf:resource="http://travel.org#Visa"/>
+        <travelsTo rdf:resource="http://travel.org#London"/>
+        <usesTransport rdf:resource="http://travel.org#LondonMetro"/>
+        <hasContact>sarah@gmail.com</hasContact>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#ScubaDivingPackage -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#ScubaDivingPackage">
+        <rdf:type rdf:resource="http://travel.org#TourismServices"/>
+        <hasPricing rdf:resource="http://travel.org#StandardPricing"/>
+        <suitableFor rdf:resource="http://travel.org#AdventureTravel"/>
+        <hasEndDate>2025-06-12</hasEndDate>
+        <hasStartDate>2025-06-10</hasStartDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#Singapore -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#Singapore">
+        <rdf:type rdf:resource="http://travel.org#Destination"/>
+        <hasHealthRequirement rdf:resource="http://travel.org#CovidGuidelines"/>
+        <providesService rdf:resource="http://travel.org#CityTour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#StandardPricing -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#StandardPricing">
+        <rdf:type rdf:resource="http://travel.org#Pricing"/>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#TravelInsurance -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#TravelInsurance">
+        <rdf:type rdf:resource="http://travel.org#HealthAndSafety"/>
+        <hasRequirementLevel>Medium</hasRequirementLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#TravelItinerary -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#TravelItinerary">
+        <rdf:type rdf:resource="http://travel.org#TravelDocuments"/>
+        <hasDocNumber>T555888999</hasDocNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#VaccinationCard -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#VaccinationCard">
+        <rdf:type rdf:resource="http://travel.org#TravelDocuments"/>
+        <hasDocNumber>VC202504</hasDocNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#VaccinationRequirements -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#VaccinationRequirements">
+        <rdf:type rdf:resource="http://travel.org#HealthAndSafety"/>
+        <hasRequirementLevel>High</hasRequirementLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://travel.org#Visa -->
+
+    <owl:NamedIndividual rdf:about="http://travel.org#Visa">
+        <rdf:type rdf:resource="http://travel.org#TravelDocuments"/>
+        <hasDocNumber>V987654321</hasDocNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#Cuba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/travel#Cuba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/travel#Destination"/>
+        <base:hasName>Cuba</base:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#HammadAhmed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/travel#HammadAhmed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/travel#Person"/>
+        <booksAccommodation rdf:resource="http://www.semanticweb.org/ontologies/travel#HammadPassport"/>
+        <base:hasDocument rdf:resource="http://www.semanticweb.org/ontologies/travel#HammadPassport"/>
+        <base:hasDocument rdf:resource="http://www.semanticweb.org/ontologies/travel#HammadTicket"/>
+        <base:hasTrip rdf:resource="http://www.semanticweb.org/ontologies/travel#HammadTripToCuba"/>
+        <bookingId>&quot;001&quot;</bookingId>
+        <hasContact>&apos;03214843566&quot;</hasContact>
+        <hasName>HammadAhmed</hasName>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2500</hasPrice>
+        <base:hasName>Hammad Ahmed</base:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#HammadPassport -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/travel#HammadPassport">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/travel#Document"/>
+        <booksAccommodation rdf:resource="http://www.semanticweb.org/ontologies/travel#HammadPassport"/>
+        <base:hasName>Passport</base:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#HammadTicket -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/travel#HammadTicket">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/travel#Document"/>
+        <base:hasName>Ticket</base:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#HammadTripToCuba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/travel#HammadTripToCuba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/travel#Trip"/>
+        <base:travelsTo rdf:resource="http://www.semanticweb.org/ontologies/travel#Cuba"/>
+        <base:hasTravelType>Adventurous</base:hasTravelType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/travel#TheSociotechs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/travel#TheSociotechs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/travel#TravelAgency"/>
+        <base:hasDocument rdf:resource="http://www.semanticweb.org/ontologies/travel#HammadPassport"/>
+        <base:hasDocument rdf:resource="http://www.semanticweb.org/ontologies/travel#HammadTicket"/>
+        <base:organizes rdf:resource="http://www.semanticweb.org/ontologies/travel#HammadTripToCuba"/>
+        <base:hasLocation>Lahore</base:hasLocation>
+        <base:hasName>TheSociotechs</base:hasName>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
